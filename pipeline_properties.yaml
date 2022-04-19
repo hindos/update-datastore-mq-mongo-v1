@@ -1,0 +1,26 @@
+integrationServer:
+  applicationNames:
+    - MQToMongo
+  releaseName: update-datastore
+  configurations:
+    setdbparms:
+      - dbparms.txt
+    serverconf:
+      - serverconf.yaml
+    policyproject:
+      - DefaultPolicies
+    keystore:
+      - tiger-bank-ace-server.kdb
+      - tiger-bank-ace-server.sth
+      - tiger-bank-ace-server-keystore.jks
+    truststore:
+      - tiger-bank-ace-server-truststore.jks
+    loopbackdatasource:
+      - datasources.json
+mq:
+  queueName: UPDATE.DATASTORE.Q.V1
+  endPointPolicyFile: DefaultPolicies/CQM4.policyxml
+  checkQueue: "yes"
+tracing: 
+  tracingNS: tracing
+  tracingEnabled: "true"
