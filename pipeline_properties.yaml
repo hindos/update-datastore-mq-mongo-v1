@@ -14,7 +14,7 @@ integrationServer:
       - arab-bank-ace-server.sth
       - arab-bank-ace-server-keystore.jks
     truststore:
-      - tiger-bank-ace-server-truststore.jks
+      - arab-bank-ace-server-truststore.jks
     loopbackdatasource:
       - datasources.json
 mq:
